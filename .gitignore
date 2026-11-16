@@ -1,0 +1,54 @@
+# ---- R ----
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+renv/library/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# ---- Analysis outputs / large objects ----
+*.rds
+*.Rds
+*.h5ad
+*.h5
+*.loom
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.mtx
+*.mtx.gz
+barcodes.tsv*
+features.tsv*
+genes.tsv*
+figures/
+output/
+results/
+tmp/
+cache/
+
+# ---- Data (never commit patient-level data) ----
+data/
+raw/
+*.xls
+*.xlsx
+*.csv
+*.tsv
+*.txt
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.log
+nohup.out
