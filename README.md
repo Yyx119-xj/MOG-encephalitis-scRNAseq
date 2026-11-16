@@ -9,8 +9,20 @@ Analysis code accompanying the manuscript:
 > Feifei Pei<sup>1</sup>, Xian Su<sup>3</sup>, Ye Du<sup>1</sup>,
 > Yixuan Ma<sup>1</sup>, Fangfang Bi<sup>4,\*</sup>, Xinling Yang<sup>1,\*</sup>
 >
-> <sup>#</sup>These authors contributed equally. <sup>\*</sup>Corresponding authors.
-> Affiliations as listed in the manuscript. Manuscript ID: RX2026-04076-W.
+> <sup>1</sup>Department of Neurology, Second Affiliated Hospital of Xinjiang Medical University, Urumqi, Xinjiang, China
+>
+> <sup>2</sup>Department of Neurology, Affiliated Traditional Chinese Medicine Hospital of Xinjiang Medical University, Urumqi, Xinjiang, China
+>
+> <sup>3</sup>Department of Neurology, The 474 Hospital of Chinese PLA, Urumqi, Xinjiang, China
+>
+> <sup>4</sup>Department of Neurology, The Fifth Affiliated Hospital of Sun Yat-sen University, Zhuhai, Guangdong, China
+>
+> <sup>#</sup>These authors contributed equally to this work.
+>
+> <sup>\*</sup>Co-corresponding authors: Fangfang Bi (biff3@mail.sysu.edu.cn);
+> Xinling Yang (yangxinling2014@163.com)
+>
+> Manuscript ID: RX2026-04076-W.
 
 This repository contains the R / Python / Perl scripts used for quality control,
 integration, clustering, cell-type annotation, differential expression, cell–cell
@@ -155,7 +167,10 @@ notice is retained.
 
 ## Contact
 
-Corresponding authors: **Fangfang Bi**, **Xinling Yang**
+Co-corresponding authors:
+
+- **Fangfang Bi** — biff3@mail.sysu.edu.cn
+- **Xinling Yang** — yangxinling2014@163.com
 
 Code maintained by: **Tong Qianwen** — qianwentong@rxbio.cc
 
