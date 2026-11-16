@@ -1,18 +1,25 @@
-# Single-cell RNA-seq analysis code — MOG antibody-associated encephalitis
+# Single-cell transcriptome reveals immune cell subset dysregulation and intercellular signaling remodeling in MOG encephalitis
 
 Analysis code accompanying the manuscript:
 
-> **<Manuscript title — please fill in>**
-> <Author list>. Manuscript ID: RX2026-04076-W.
+> **Single-cell transcriptome reveals immune cell subset dysregulation and
+> intercellular signaling remodeling in MOG encephalitis**
+>
+> Yuxuan Yong<sup>1,#</sup>, Ting Liu<sup>2,#</sup>, Mengdie Hao<sup>1</sup>,
+> Feifei Pei<sup>1</sup>, Xian Su<sup>3</sup>, Ye Du<sup>1</sup>,
+> Yixuan Ma<sup>1</sup>, Fangfang Bi<sup>4,\*</sup>, Xinling Yang<sup>1,\*</sup>
+>
+> <sup>#</sup>These authors contributed equally. <sup>\*</sup>Corresponding authors.
+> Affiliations as listed in the manuscript. Manuscript ID: RX2026-04076-W.
 
 This repository contains the R / Python / Perl scripts used for quality control,
 integration, clustering, cell-type annotation, differential expression, cell–cell
 communication, transcription-factor activity and pseudotime analyses of
 single-cell RNA-seq data from patients with MOG antibody-associated
-encephalitis (MOGAD) and healthy controls (HC).
+encephalitis (MOG encephalitis) and healthy controls (HC).
 
 Raw sequencing data and per-cell expression matrices are **not** included here
-(see *Data availability*).
+(see [Data availability](#data-availability)).
 
 ---
 
@@ -28,7 +35,7 @@ Raw sequencing data and per-cell expression matrices are **not** included here
 | `基础/` | `scRNAtoolVis_plot.r` | Volcano and summary plots (scRNAtoolVis) |
 | `基础/` | `kegg_go_pipe_one.pl` | GO / KEGG functional enrichment (Perl pipeline wrapper) |
 | `拟时序/` | `monocle2_basic_v2.r` | Pseudotime / trajectory analysis with Monocle 2 |
-| `通讯/` | `sc_cellchat_bycelltype_1_sample.r` | Cell–Cell communication (CellChat) within a single sample, per cell type |
+| `通讯/` | `sc_cellchat_bycelltype_1_sample.r` | Cell–cell communication (CellChat) within a single sample, per cell type |
 | `通讯/` | `sc_cellchat_bycelltype_2_compare.r` | Comparative CellChat analysis between MOG and HC |
 | `转录因子/` | `Seurat2loom.py` | Convert Seurat objects to `.loom` for SCENIC |
 | `转录因子/` | `SCENIC_Plot_bycelltype_v2.r` | SCENIC regulon activity, per cell type |
@@ -77,7 +84,7 @@ scanpy, loompy, numpy, optparse
 
 ## How to run
 
-Scripts are numbered by analysis stage and are designed to be run in the
+Scripts are organised by analysis stage and are designed to be run in the
 following order. Paths to input objects are passed as command-line arguments
 (`optparse`); edit the `setwd()` / input-path variables at the top of each
 script to match your local environment.
@@ -116,9 +123,13 @@ are not tracked in this repository.
 
 ## Data availability
 
-The single-cell RNA-seq data supporting this study have been deposited in
-**<repository, e.g. GEO / GSA / SRA>** under accession **<accession ID>**
-[add URL once available].
+The single-cell RNA-seq data supporting this study have been deposited in the
+**NCBI Gene Expression Omnibus (GEO)** under accession
+**[GSE353303](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE353303)**.
+
+The series is private during peer review and will be released upon publication.
+<!-- TODO: insert the GEO reviewer token link here before submission, e.g.
+     https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE353303&token=xxxxxxxx -->
 
 Because the data derive from human participants, individual-level expression
 matrices are not distributed through this repository. Processed data may be
@@ -127,13 +138,25 @@ institutional ethics approval.
 
 ---
 
+## Citation
+
+If you use this code, please cite the manuscript above. A permanent DOI for
+this repository will be added here once the paper is accepted.
+
+---
+
 ## License
 
-<Choose one — e.g. MIT / GPL-3.0 / CC BY 4.0>. See `LICENSE`.
+This code is released under the **MIT License** — see [LICENSE](LICENSE).
+You are free to use, modify and redistribute it, provided that the copyright
+notice is retained.
 
 ---
 
 ## Contact
 
-Corresponding author: **<name>** — <email>
+Corresponding authors: **Fangfang Bi**, **Xinling Yang**
+
 Code maintained by: **Tong Qianwen** — qianwentong@rxbio.cc
+
+For questions about the analysis, please open an issue in this repository.
