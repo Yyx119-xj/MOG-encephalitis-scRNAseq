@@ -39,28 +39,28 @@ Raw sequencing data and per-cell expression matrices are **not** included here
 
 | Directory | Script | Purpose |
 |---|---|---|
-| `基础/` | `sc_preprocessing.r` | Quality control, doublet removal (DoubletFinder), ambient RNA correction (SoupX), integration (Harmony), clustering and UMAP |
-| `基础/` | `sc_cells_analysis.r` | Cell-type annotation, marker detection, differential abundance and DEG analysis across cell types |
-| `基础/` | `sc_genes_analysis.r` | Gene-level analyses, including pseudobulk differential expression between MOG and HC |
-| `基础/` | `sc_cell_pct_plot.r` | Cell-composition plotting |
-| `基础/` | `sc_correlation.r` | Correlation analyses across samples / cell types |
-| `基础/` | `scRNAtoolVis_plot.r` | Volcano and summary plots (scRNAtoolVis) |
-| `基础/` | `kegg_go_pipe_one.pl` | GO / KEGG functional enrichment (Perl pipeline wrapper) |
-| `拟时序/` | `monocle2_basic_v2.r` | Pseudotime / trajectory analysis with Monocle 2 |
-| `通讯/` | `sc_cellchat_bycelltype_1_sample.r` | Cell–cell communication (CellChat) within a single sample, per cell type |
-| `通讯/` | `sc_cellchat_bycelltype_2_compare.r` | Comparative CellChat analysis between MOG and HC |
-| `转录因子/` | `Seurat2loom.py` | Convert Seurat objects to `.loom` for SCENIC |
-| `转录因子/` | `SCENIC_Plot_bycelltype_v2.r` | SCENIC regulon activity, per cell type |
-| `转录因子/` | `AUC_plot_v2.r` | AUCell regulon-activity plots |
-| `转录因子/` | `sc_genes_plot.r` | Expression plots for selected genes / regulons |
+| `basic/` | `sc_preprocessing.r` | Quality control, doublet removal (DoubletFinder), ambient RNA correction (SoupX), integration (Harmony), clustering and UMAP |
+| `basic/` | `sc_cells_analysis.r` | Cell-type annotation, marker detection, differential abundance and DEG analysis across cell types |
+| `basic/` | `sc_genes_analysis.r` | Gene-level analyses, including pseudobulk differential expression between MOG and HC |
+| `basic/` | `sc_cell_pct_plot.r` | Cell-composition plotting |
+| `basic/` | `sc_correlation.r` | Correlation analyses across samples / cell types |
+| `basic/` | `scRNAtoolVis_plot.r` | Volcano and summary plots (scRNAtoolVis) |
+| `basic/` | `kegg_go_pipe_one.pl` | GO / KEGG functional enrichment (Perl pipeline wrapper) |
+| `monocle2/` | `monocle2_basic_v2.r` | Pseudotime / trajectory analysis with Monocle 2 |
+| `cellchat/` | `sc_cellchat_bycelltype_1_sample.r` | Cell–cell communication (CellChat) within a single sample, per cell type |
+| `cellchat/` | `sc_cellchat_bycelltype_2_compare.r` | Comparative CellChat analysis between MOG and HC |
+| `SCENIC/` | `Seurat2loom.py` | Convert Seurat objects to `.loom` for SCENIC |
+| `SCENIC/` | `SCENIC_Plot_bycelltype_v2.r` | SCENIC regulon activity, per cell type |
+| `SCENIC/` | `AUC_plot_v2.r` | AUCell regulon-activity plots |
+| `SCENIC/` | `sc_genes_plot.r` | Expression plots for selected genes / regulons |
 
 ---
 
 ## Requirements
 
 - **R** ≥ 4.1 (scripts were developed and tested on R 4.x)
-- **Python** ≥ 3.8 (only for `转录因子/Seurat2loom.py`)
-- **Perl** ≥ 5 (only for `基础/kegg_go_pipe_one.pl`)
+- **Python** ≥ 3.8 (only for `SCENIC/Seurat2loom.py`)
+- **Perl** ≥ 5 (only for `basic/kegg_go_pipe_one.pl`)
 
 ### R packages
 
@@ -103,29 +103,29 @@ script to match your local environment.
 
 ```bash
 # 1. Preprocessing, integration and clustering
-Rscript 基础/sc_preprocessing.r
+Rscript basic/sc_preprocessing.r
 
 # 2. Cell-type annotation and differential analyses
-Rscript 基础/sc_cells_analysis.r
-Rscript 基础/sc_genes_analysis.r
+Rscript basic/sc_cells_analysis.r
+Rscript basic/sc_genes_analysis.r
 
 # 3. Descriptive / summary figures
-Rscript 基础/sc_cell_pct_plot.r
-Rscript 基础/sc_correlation.r
-Rscript 基础/scRNAtoolVis_plot.r
+Rscript basic/sc_cell_pct_plot.r
+Rscript basic/sc_correlation.r
+Rscript basic/scRNAtoolVis_plot.r
 
 # 4. Pseudotime
-Rscript 拟时序/monocle2_basic_v2.r
+Rscript monocle2/monocle2_basic_v2.r
 
 # 5. Cell-cell communication
-Rscript 通讯/sc_cellchat_bycelltype_1_sample.r
-Rscript 通讯/sc_cellchat_bycelltype_2_compare.r
+Rscript cellchat/sc_cellchat_bycelltype_1_sample.r
+Rscript cellchat/sc_cellchat_bycelltype_2_compare.r
 
 # 6. Transcription-factor (SCENIC) analysis
-python 转录因子/Seurat2loom.py
-Rscript 转录因子/SCENIC_Plot_bycelltype_v2.r
-Rscript 转录因子/AUC_plot_v2.r
-Rscript 转录因子/sc_genes_plot.r
+python SCENIC/Seurat2loom.py
+Rscript SCENIC/SCENIC_Plot_bycelltype_v2.r
+Rscript SCENIC/AUC_plot_v2.r
+Rscript SCENIC/sc_genes_plot.r
 ```
 
 Intermediate `.rds` / `.loom` objects are written to the working directory and
