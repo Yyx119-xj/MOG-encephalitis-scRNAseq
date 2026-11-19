@@ -21,8 +21,6 @@ Analysis code accompanying the manuscript:
 >
 > <sup>\*</sup>Co-corresponding authors: Fangfang Bi (biff3@mail.sysu.edu.cn);
 > Xinling Yang (yangxinling2014@163.com)
->
-> Manuscript ID: RX2026-04076-W.
 
 This repository contains the R / Python / Perl scripts used for quality control,
 integration, clustering, cell-type annotation, differential expression, cell–cell

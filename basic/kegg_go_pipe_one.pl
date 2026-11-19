@@ -1,10 +1,4 @@
 #!/usr/bin/perl -w
-#
-# Copyright (c)   AB_Life 2011
-# Writer:         dongchen <dongchen@ablife.cc>
-# Program Date:   2011.06.28
-# Modifier:       dongchen <dongchen@ablife.cc>
-# Last Modified:  2011.06.28
 my $ver="1.0.0";
 
 use strict;
