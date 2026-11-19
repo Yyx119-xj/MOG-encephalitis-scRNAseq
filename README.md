@@ -172,6 +172,4 @@ Co-corresponding authors:
 - **Fangfang Bi** — biff3@mail.sysu.edu.cn
 - **Xinling Yang** — yangxinling2014@163.com
 
-Code maintained by: **Tong Qianwen** — qianwentong@rxbio.cc
-
 For questions about the analysis, please open an issue in this repository.
