@@ -56,7 +56,7 @@ Raw sequencing data and per-cell expression matrices are **not** included here
 
 ## Requirements
 
-- **R** ≥ 4.1 (scripts were developed and tested on R 4.x)
+- **R** 4.3.3 — all analyses were performed with this version
 - **Python** ≥ 3.8 (only for `SCENIC/Seurat2loom.py`)
 - **Perl** ≥ 5 (only for `basic/kegg_go_pipe_one.pl`)
 
@@ -129,6 +129,22 @@ Rscript SCENIC/sc_genes_plot.r
 Intermediate `.rds` / `.loom` objects are written to the working directory and
 are not tracked in this repository.
 
+### Adapting the scripts to your environment
+
+The analysis pipeline was adapted from an in-house single-cell pipeline and has
+been substantially modified for this study. Several scripts still contain
+absolute paths from the original computing cluster, for example:
+
+```r
+source("/public/pipeline/ablifepipe/latest/src/SingleCell/sctype/gene_sets_prepare.R")
+```
+
+These paths point to helper scripts and reference files (such as the ScType
+database) that are not redistributed here. They must be replaced with the
+corresponding files on your own system before the scripts can be executed.
+Input objects and output directories are otherwise supplied through the
+`optparse` command-line arguments documented at the top of each script.
+
 ---
 
 ## Data availability
@@ -141,10 +157,10 @@ The series is private during peer review and will be released upon publication.
 <!-- TODO: insert the GEO reviewer token link here before submission, e.g.
      https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE353303&token=xxxxxxxx -->
 
-Because the data derive from human participants, individual-level expression
-matrices are not distributed through this repository. Processed data may be
-obtained from the corresponding author upon reasonable request, subject to
-institutional ethics approval.
+This repository contains analysis code only. Raw sequencing reads (fastq) and
+processed expression matrices are both available through GEO under the accession
+above. Data derived from human participants are shared in de-identified form
+only.
 
 ---
 
